@@ -1,5 +1,6 @@
-
-/*CARD */
+html {
+    overflow-y:scroll;
+}
 
 .body {
 	margin-top: 50px;
@@ -31,6 +32,11 @@ div.bottom {
 /* image settings */
 img.home {
 	max-width: 600px;
+}
+
+img.work {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .fancybox-wrapper a img{ display:inline-block; vertical-align:top; width:33%;}
