@@ -4,14 +4,12 @@
 .body {
 	margin-top: 50px;
 }
-
+div.content {
+	margin-top: 50px !important;
+}
 /* title & nav bar */
 a.title {
 	color: #222 !important;
-}
-
-nav {
-	margin-top: 50px;
 }
 a.nav-link {
 	color: #888 !important;
@@ -25,7 +23,12 @@ a.nav-link:hover {
 
 /* bottom */
 div.bottom {
-	position: absolute;
-	bottom: 100px;
+	margin-top: 150px;
+	margin-bottom: 100px;
 	color: #888;
+}
+
+/* image settings */
+img.home {
+	max-width: 600px;
 }
