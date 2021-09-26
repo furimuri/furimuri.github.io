@@ -24,24 +24,24 @@ $("#workPage").click(function(){
 
     let contentStr = "";
     contentStr = contentStr.concat("<div class='row'>");
-        contentStr = contentStr.concat("<div class='col-6'>");
+        contentStr = contentStr.concat("<div class='col-md-6 col-sm-12'>");
             contentStr = contentStr.concat("<a href='./img/work/01.jpg' data-fancybox='gallery' data-caption='Optional caption'>");
             contentStr = contentStr.concat("<img class='work img-fluid' style='max-width: 300px;' src='./img/work/01.jpg' alt=''>");
             contentStr = contentStr.concat("</a>");
         contentStr = contentStr.concat("</div>");
-        contentStr = contentStr.concat("<div class='col-6'>");
+        contentStr = contentStr.concat("<div class='col-md-6 col-sm-12'>");
             contentStr = contentStr.concat("<a href='./img/work/02.jpg' data-fancybox='gallery' data-caption='Optional caption'>");
             contentStr = contentStr.concat("<img class='work img-fluid' style='max-width: 300px;' src='./img/work/02.jpg' alt=''>");
             contentStr = contentStr.concat("</a>");
         contentStr = contentStr.concat("</div>");
     contentStr = contentStr.concat("</div>");
     contentStr = contentStr.concat("<div class='row'>");
-        contentStr = contentStr.concat("<div class='col-6'>");
+        contentStr = contentStr.concat("<div class='col-md-6 col-sm-12'>");
             contentStr = contentStr.concat("<a href='./img/work/03.jpg' data-fancybox='gallery' data-caption='Optional caption'>");
             contentStr = contentStr.concat("<img class='work img-fluid' style='max-width: 300px;' src='./img/work/03.jpg' alt=''>");
             contentStr = contentStr.concat("</a>");
         contentStr = contentStr.concat("</div>");
-        contentStr = contentStr.concat("<div class='col-6'>");
+        contentStr = contentStr.concat("<div class='col-md-6 col-sm-12'>");
         contentStr = contentStr.concat("</div>");
     contentStr = contentStr.concat("</div>");
 
