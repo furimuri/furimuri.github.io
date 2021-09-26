@@ -32,3 +32,5 @@ div.bottom {
 img.home {
 	max-width: 600px;
 }
+
+.fancybox-wrapper a img{ display:inline-block; vertical-align:top; width:33%;}
