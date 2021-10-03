@@ -1,0 +1,46 @@
+{
+    "myWork": [
+        {
+            "name": "Paper Tape",
+            "content": "紙膠帶",
+            "images": ""
+        },
+        {
+            "name": "Shop Logo",
+            "content": "商店招牌",
+            "images": ""
+        },
+        {
+            "name": "Line Stickers",
+            "content": "Line貼圖",
+            "images": ""
+        },
+        {
+            "name": "Poster",
+            "content": "海報",
+            "images": ""
+        }
+    ],
+    "myPostcards": [
+        {
+            "name": "01",
+            "content": "",
+            "images": ""
+        },
+        {
+            "name": "02",
+            "content": "",
+            "images": ""
+        },
+        {
+            "name": "03",
+            "content": "",
+            "images": ""
+        },
+        {
+            "name": "04",
+            "content": "",
+            "images": ""
+        }
+    ]
+}

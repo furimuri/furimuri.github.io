@@ -2,28 +2,54 @@
 let workImgs = new Array();
 let postcardImgs = new Array();
 
-$.ajax({
-    url: "./img/postcard",
-    success: function(data) {
-        var parser = new DOMParser(),
-            doc = parser.parseFromString(data, 'text/html');
-        var rows = doc.querySelector('ul').querySelectorAll('li');
-        for (var i=1;i<rows.length;i++) {
-            postcardImgs.push(rows[i].querySelector('a span.name').innerHTML);
-        }
+$.getJSON( "./json/images.json", function(data) {
+    for(let i=0;i<data.myWork.length;i++) {
+        workImgs.push(data.myWork[i].name + ".png")
     }
-});
-$.ajax({
-    url: "./img/work",
-    success: function(data) {
-        var parser = new DOMParser(),
-            doc = parser.parseFromString(data, 'text/html');
-        var rows = doc.querySelector('ul').querySelectorAll('li');
-        for (var i=1;i<rows.length;i++) {
-            workImgs.push(rows[i].querySelector('a span.name').innerHTML);
-        }
+    for(let i=0;i<data.myPostcards.length;i++) {
+        postcardImgs.push(data.myPostcards[i].name + ".jpg")
     }
+    console.log(workImgs);
+    console.log(postcardImgs);
 });
+
+// for(let i=0;i<20;i++) {
+//     $.ajax({
+//         url: "https://furimuri.github.io/img/postcard/0"+ i +".jpg",
+//         success: function(data) {
+//             postcardImgs.push("0"+i+".jpg");
+//         },
+//         error: function(data) {
+//             console.log("error");
+//         }
+//     });
+// }
+// console.log(postcardImgs);
+
+
+
+// $.ajax({
+//     url: "https://furimuri.github.io/img/postcard",
+//     success: function(data) {
+//         var parser = new DOMParser(),
+//             doc = parser.parseFromString(data, 'text/html');
+//         var rows = doc.querySelector('ul').querySelectorAll('li');
+//         for (var i=1;i<rows.length;i++) {
+//             postcardImgs.push(rows[i].querySelector('a span.name').innerHTML);
+//         }
+//     }
+// });
+// $.ajax({
+//     url: "./img/work",
+//     success: function(data) {
+//         var parser = new DOMParser(),
+//             doc = parser.parseFromString(data, 'text/html');
+//         var rows = doc.querySelector('ul').querySelectorAll('li');
+//         for (var i=1;i<rows.length;i++) {
+//             workImgs.push(rows[i].querySelector('a span.name').innerHTML);
+//         }
+//     }
+// });
 
 // functions
 function rightContentLoader() {
@@ -119,7 +145,7 @@ $("#workPage").click(function(){
 });
 
 function getObjectName(input){
-    var rows = input.querySelector('img').name.split('.')[1];
+    var rows = input.querySelector('img').name.split('.')[0];
     return rows;
 }
 
