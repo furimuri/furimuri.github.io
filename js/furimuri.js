@@ -1,3 +1,46 @@
+// Get images
+let workImgs = new Array();
+let postcardImgs = new Array();
+
+$.ajax({
+    url: "./img/postcard",
+    success: function(data) {
+        var parser = new DOMParser(),
+            doc = parser.parseFromString(data, 'text/html');
+        var rows = doc.querySelector('ul').querySelectorAll('li');
+        for (var i=1;i<rows.length;i++) {
+            postcardImgs.push(rows[i].querySelector('a span.name').innerHTML);
+        }
+    }
+});
+$.ajax({
+    url: "./img/work",
+    success: function(data) {
+        var parser = new DOMParser(),
+            doc = parser.parseFromString(data, 'text/html');
+        var rows = doc.querySelector('ul').querySelectorAll('li');
+        for (var i=1;i<rows.length;i++) {
+            workImgs.push(rows[i].querySelector('a span.name').innerHTML);
+        }
+    }
+});
+
+// functions
+function rightContentLoader() {
+    $(".loading").css("display", "");
+    $(".loader-inner").loaders();
+    setTimeout(function () {
+        $(".loading").fadeOut(600);
+    }, 1600);
+
+    // rightContent 的淡入時間
+    setTimeout(function () {
+        $("#rightContent").fadeTo(1000,1);
+    }, 2000);
+}
+
+
+// UI functions
 $("a.nav-link").click(function(){
     let rightTitle = $("#rightTitle");
     $(this).siblings().removeClass("active");
@@ -19,34 +62,68 @@ $("#homePage").click(function(){
     rightTitle.html("");
 });
 
-$("#workPage").click(function(){
+$("#postcardPage").click(function(){
     let rightContent = $("#rightContent");
-
     let contentStr = "";
-    contentStr = contentStr.concat("<div class='row'>");
+    rightContent.css("opacity", "0.01");
+    rightContentLoader();
+    for(let i=0;i<postcardImgs.length;i++) {
+        if(i%2==0) {
+            contentStr = contentStr.concat("<div class='row'>");
+        }
         contentStr = contentStr.concat("<div class='col-md-6 col-sm-12'>");
-            contentStr = contentStr.concat("<a href='./img/work/01.jpg' data-fancybox='gallery' data-caption='Optional caption'>");
-            contentStr = contentStr.concat("<img class='work img-fluid' style='max-width: 300px;' src='./img/work/01.jpg' alt=''>");
-            contentStr = contentStr.concat("</a>");
+        contentStr = contentStr.concat("<a href='./img/postcard/" + postcardImgs[i]+ "' data-fancybox='gallery' data-caption='Optional caption'>");
+        contentStr = contentStr.concat("<img class='work img-fluid' style='max-width: 300px;' src='./img/postcard/" + postcardImgs[i]+ "' alt=''>");
+        contentStr = contentStr.concat("</a>");
         contentStr = contentStr.concat("</div>");
-        contentStr = contentStr.concat("<div class='col-md-6 col-sm-12'>");
-            contentStr = contentStr.concat("<a href='./img/work/02.jpg' data-fancybox='gallery' data-caption='Optional caption'>");
-            contentStr = contentStr.concat("<img class='work img-fluid' style='max-width: 300px;' src='./img/work/02.jpg' alt=''>");
-            contentStr = contentStr.concat("</a>");
-        contentStr = contentStr.concat("</div>");
-    contentStr = contentStr.concat("</div>");
-    contentStr = contentStr.concat("<div class='row'>");
-        contentStr = contentStr.concat("<div class='col-md-6 col-sm-12'>");
-            contentStr = contentStr.concat("<a href='./img/work/03.jpg' data-fancybox='gallery' data-caption='Optional caption'>");
-            contentStr = contentStr.concat("<img class='work img-fluid' style='max-width: 300px;' src='./img/work/03.jpg' alt=''>");
-            contentStr = contentStr.concat("</a>");
-        contentStr = contentStr.concat("</div>");
-        contentStr = contentStr.concat("<div class='col-md-6 col-sm-12'>");
-        contentStr = contentStr.concat("</div>");
-    contentStr = contentStr.concat("</div>");
-
+        if(i%2!=0) {
+            contentStr = contentStr.concat("</div>");
+        }
+    }
     rightContent.html(contentStr);
 });
+
+
+$("#workPage").click(function(){
+    let rightContent = $("#rightContent");
+    let contentStr = "";
+    rightContent.css("opacity", "0.01");
+    for(let i=0;i<workImgs.length;i++) {
+        if(i%2==0) {
+            contentStr = contentStr.concat("<div class='row'>");
+        }
+        contentStr = contentStr.concat("<div class='col-md-6 col-sm-12'>");
+        contentStr = contentStr.concat("<div class='nsb'>");
+        contentStr = contentStr.concat("<a href='./img/work/" + workImgs[i]+ "' data-fancybox='gallery' data-caption='Optional caption'>");
+        contentStr = contentStr.concat("<img name='" + workImgs[i] + "' class='work img-fluid' style='max-width: 300px;' src='./img/work/" + workImgs[i]+ "' alt=''>");
+        contentStr = contentStr.concat("</a>");
+        contentStr = contentStr.concat("</div>");
+        contentStr = contentStr.concat("</div>");
+        if(i%2!=0) {
+            contentStr = contentStr.concat("</div>");
+        }
+    }
+    rightContent.html(contentStr);
+    
+    setTimeout(function(){
+        $("div.nsb a").each(function(){
+            $(this).nsHover({
+                bgcolor: '#fff',
+                bganim : 'fade',
+                bgpic: '',
+                content: '<div class="content" style="color: #222;">' +  getObjectName(this) + '</div>'
+            });
+        });
+        rightContentLoader();
+    }, 200);
+});
+
+function getObjectName(input){
+    var rows = input.querySelector('img').name.split('.')[1];
+    return rows;
+}
+
+
 
 // if(jQuery().fancybox) {
 //     $(document).ready(function() {

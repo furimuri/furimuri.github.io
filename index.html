@@ -9,7 +9,9 @@
     <link rel="stylesheet" type="text/css" href="css/furimuri.css"/>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.5.1.1.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/fancybox.css"/>
+    <link rel="stylesheet" type="text/css" href="css/loaders.min.css"/>
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css"/>
+
     <!--[if IE]>
     <script type="text/javascript" src="js/vendors/html5.min.js"></script>
     <![endif]-->
@@ -21,46 +23,51 @@
     </script>
 </head>
 <body class="body">
-<div class="container">
-    <header class="header">
-        <h1><a id="homePage" class="title text-decoration-none" href="#" target="_self">Furimuri</a></h1>
-    </header>
-    <div class="content">
-        <div class="row align-items-start">
-            <div class="col-3">
-                <nav class="nav flex-column">
-                    <a name="work" id="workPage" class="nav-link" href="#">Works</a>
-                    <a name="class1" class="nav-link" href="#">Link</a>
-                    <a name="class2" class="nav-link" href="#">Link</a>
-                </nav>
-            </div>
-            <div class="col-9">
-                <div class="row align-items-start">
-                    <div id="rightTitle"></div>
+    <div class="container">
+        <header class="header">
+            <h1><a id="homePage" class="title text-decoration-none" href="#" target="_self">Furimuri</a></h1>
+        </header>
+        <div class="content">
+            <div class="row align-items-start">
+                <div class="col-3">
+                    <nav class="nav flex-column">
+                        <a name="work" id="workPage" class="nav-link" href="#">Works</a>
+                        <a name="postcard" id="postcardPage" class="nav-link" href="#">Post card</a>
+                        <a name="class2" class="nav-link" href="#">Link</a>
+                    </nav>
                 </div>
-                <div class="row align-items-start"></div>
-                    <div id="rightContent">
-                        <img src='./img/home.png' class='home rounded float-left img-fluid'>
+                <div class="col-9">
+                    <div class="loading" style="display: none;">
+                        <div class="loader-inner ball-spin-fade-loader"></div>
+                    </div>
+                    <div class="row align-items-start">
+                        <div id="rightTitle"></div>
+                    </div>
+                    <div class="row align-items-start"></div>
+                        <div id="rightContent">
+                            <img src='./img/home.png' class='home rounded float-left img-fluid'>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row align-items-start">
-            <div class="bottom">
-                <div>​©️ 2021 furimuri</div>
+            <div class="row align-items-start">
+                <div class="bottom">
+                    <div>​©️ 2021 furimuri</div>
+                </div>
             </div>
         </div>
+        <!-- /container -->
+        
     </div>
-    <!-- /container -->
-    
-</div>
-<!-- JS -->
+    <!-- JS -->
 
-<!-- <script src="js/jquery-1.7.min.js"></script> -->
+    <!-- <script src="js/jquery-1.7.min.js"></script> -->
 
-<script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/bootstrap.5.1.1.min.js"></script>
-<script src="js/fancybox.umd.js"></script>
-<script src="js/furimuri.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.5.1.1.min.js"></script>
+    <script src="js/ns.hover.min.js"></script>
+    <script src="js/loaders.css.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/furimuri.js"></script>
 </body>
 </html>
