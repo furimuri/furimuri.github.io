@@ -114,6 +114,7 @@ $("#workPage").click(function(){
     let rightContent = $("#rightContent");
     let contentStr = "";
     rightContent.css("opacity", "0.01");
+    $(".loading").css("display", "");
     for(let i=0;i<workImgs.length;i++) {
         if(i%2==0) {
             contentStr = contentStr.concat("<div class='row'>");
