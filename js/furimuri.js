@@ -120,7 +120,7 @@ $("#workPage").click(function(){
         }
         contentStr = contentStr.concat("<div class='col-md-6 col-sm-12'>");
         contentStr = contentStr.concat("<div class='nsb'>");
-        contentStr = contentStr.concat("<a href='./img/work/" + workImgs[i]+ "' data-fancybox='gallery' data-caption='Optional caption'>");
+        contentStr = contentStr.concat("<a href='#'>");
         contentStr = contentStr.concat("<img name='" + workImgs[i] + "' class='work img-fluid' style='max-width: 300px;' src='./img/work/" + workImgs[i]+ "' alt=''>");
         contentStr = contentStr.concat("</a>");
         contentStr = contentStr.concat("</div>");
