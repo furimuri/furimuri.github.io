@@ -98,7 +98,7 @@ $("#homePage").click(function(){
     let contentStr = "";
     contentStr = contentStr.concat("<div class='row'>");
         contentStr = contentStr.concat("<div class='col-12'>");
-        contentStr = contentStr.concat("<img src='./img/home.png' class='home rounded float-left img-fluid'>");
+        contentStr = contentStr.concat("<img src='./img/home.jpg' class='home rounded float-left img-fluid'>");
         contentStr = contentStr.concat("</a>");
     contentStr = contentStr.concat("</div>");
 
