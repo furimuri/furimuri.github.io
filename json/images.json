@@ -21,7 +21,7 @@
             "images": ""
         }
     ],
-    "myPostcards": [
+    "animal": [
         {
             "name": "01",
             "content": "",
@@ -39,6 +39,108 @@
         },
         {
             "name": "04",
+            "content": "",
+            "images": ""
+        },
+        {
+            "name": "05",
+            "content": "",
+            "images": ""
+        }
+    ],
+    "coffee": [
+        {
+            "name": "01",
+            "content": "",
+            "images": ""
+        },
+        {
+            "name": "02",
+            "content": "",
+            "images": ""
+        },
+        {
+            "name": "03",
+            "content": "",
+            "images": ""
+        },
+        {
+            "name": "04",
+            "content": "",
+            "images": ""
+        },
+        {
+            "name": "05",
+            "content": "",
+            "images": ""
+        },
+        {
+            "name": "06",
+            "content": "",
+            "images": ""
+        },
+        {
+            "name": "07",
+            "content": "",
+            "images": ""
+        },{
+            "name": "08",
+            "content": "",
+            "images": ""
+        },{
+            "name": "09",
+            "content": "",
+            "images": ""
+        },{
+            "name": "10",
+            "content": "",
+            "images": ""
+        }
+    ],
+    "illus": [
+        {
+            "name": "01",
+            "content": "",
+            "images": ""
+        },
+        {
+            "name": "02",
+            "content": "",
+            "images": ""
+        }
+    ],
+    "line": [
+        {
+            "name": "01",
+            "content": "",
+            "images": ""
+        }
+    ],
+    "merry": [
+        {
+            "name": "01",
+            "content": "",
+            "images": ""
+        },
+        {
+            "name": "02",
+            "content": "",
+            "images": ""
+        },
+        {
+            "name": "03",
+            "content": "",
+            "images": ""
+        }
+    ],
+    "watercolor": [
+        {
+            "name": "01",
+            "content": "",
+            "images": ""
+        },
+        {
+            "name": "02",
             "content": "",
             "images": ""
         }

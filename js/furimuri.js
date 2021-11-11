@@ -1,16 +1,34 @@
 // Get images
 let workImgs = new Array();
-let postcardImgs = new Array();
+let animalImgs = new Array();
+let coffeeImgs = new Array();
+let illusImgs = new Array();
+let lineImgs = new Array();
+let merryImgs = new Array();
+let watercolorImgs = new Array();
 
 $.getJSON( "./json/images.json", function(data) {
     for(let i=0;i<data.myWork.length;i++) {
         workImgs.push(data.myWork[i].name + ".png")
     }
-    for(let i=0;i<data.myPostcards.length;i++) {
-        postcardImgs.push(data.myPostcards[i].name + ".jpg")
+    for(let i=0;i<data.animal.length;i++) {
+        animalImgs.push(data.animal[i].name + ".jpg")
     }
-    console.log(workImgs);
-    console.log(postcardImgs);
+    for(let i=0;i<data.coffee.length;i++) {
+        coffeeImgs.push(data.coffee[i].name + ".jpg")
+    }
+    for(let i=0;i<data.illus.length;i++) {
+        illusImgs.push(data.illus[i].name + ".jpg")
+    }
+    for(let i=0;i<data.line.length;i++) {
+        lineImgs.push(data.line[i].name + ".jpg")
+    }
+    for(let i=0;i<data.merry.length;i++) {
+        merryImgs.push(data.merry[i].name + ".jpg")
+    }
+    for(let i=0;i<data.watercolor.length;i++) {
+        watercolorImgs.push(data.watercolor[i].name + ".jpg")
+    }
 });
 
 // for(let i=0;i<20;i++) {
@@ -57,12 +75,12 @@ function rightContentLoader() {
     $(".loader-inner").loaders();
     setTimeout(function () {
         $(".loading").fadeOut(600);
-    }, 1600);
+    }, 2400);
 
     // rightContent 的淡入時間
     setTimeout(function () {
         $("#rightContent").fadeTo(1000,1);
-    }, 2000);
+    }, 2800);
 }
 
 
@@ -88,18 +106,123 @@ $("#homePage").click(function(){
     rightTitle.html("");
 });
 
-$("#postcardPage").click(function(){
+$("#animalPage").click(function(){
     let rightContent = $("#rightContent");
     let contentStr = "";
     rightContent.css("opacity", "0.01");
     rightContentLoader();
-    for(let i=0;i<postcardImgs.length;i++) {
+    for(let i=0;i<animalImgs.length;i++) {
         if(i%2==0) {
             contentStr = contentStr.concat("<div class='row'>");
         }
         contentStr = contentStr.concat("<div class='col-md-6 col-sm-12'>");
-        contentStr = contentStr.concat("<a href='./img/postcard/" + postcardImgs[i]+ "' data-fancybox='gallery' data-caption='Optional caption'>");
-        contentStr = contentStr.concat("<img class='work img-fluid' style='max-width: 300px;' src='./img/postcard/" + postcardImgs[i]+ "' alt=''>");
+        contentStr = contentStr.concat("<a href='./img/Animal Illustration/" + animalImgs[i]+ "' data-fancybox='gallery' data-caption='Optional caption'>");
+        contentStr = contentStr.concat("<img class='work img-fluid' style='max-width: 300px;' src='./img/Animal Illustration/" + animalImgs[i]+ "' alt=''>");
+        contentStr = contentStr.concat("</a>");
+        contentStr = contentStr.concat("</div>");
+        if(i%2!=0) {
+            contentStr = contentStr.concat("</div>");
+        }
+    }
+    rightContent.html(contentStr);
+});
+
+$("#coffeePage").click(function(){
+    let rightContent = $("#rightContent");
+    let contentStr = "";
+    rightContent.css("opacity", "0.01");
+    rightContentLoader();
+    for(let i=0;i<coffeeImgs.length;i++) {
+        if(i%2==0) {
+            contentStr = contentStr.concat("<div class='row'>");
+        }
+        contentStr = contentStr.concat("<div class='col-md-6 col-sm-12'>");
+        contentStr = contentStr.concat("<a href='./img/Coffee Shop/" + coffeeImgs[i]+ "' data-fancybox='gallery' data-caption='Optional caption'>");
+        contentStr = contentStr.concat("<img class='work img-fluid' style='max-width: 300px;' src='./img/Coffee Shop/" + coffeeImgs[i]+ "' alt=''>");
+        contentStr = contentStr.concat("</a>");
+        contentStr = contentStr.concat("</div>");
+        if(i%2!=0) {
+            contentStr = contentStr.concat("</div>");
+        }
+    }
+    rightContent.html(contentStr);
+});
+
+$("#illusPage").click(function(){
+    let rightContent = $("#rightContent");
+    let contentStr = "";
+    rightContent.css("opacity", "0.01");
+    rightContentLoader();
+    for(let i=0;i<illusImgs.length;i++) {
+        if(i%2==0) {
+            contentStr = contentStr.concat("<div class='row'>");
+        }
+        contentStr = contentStr.concat("<div class='col-md-6 col-sm-12'>");
+        contentStr = contentStr.concat("<a href='./img/Illustration/" + illusImgs[i]+ "' data-fancybox='gallery' data-caption='Optional caption'>");
+        contentStr = contentStr.concat("<img class='work img-fluid' style='max-width: 300px;' src='./img/Illustration/" + illusImgs[i]+ "' alt=''>");
+        contentStr = contentStr.concat("</a>");
+        contentStr = contentStr.concat("</div>");
+        if(i%2!=0) {
+            contentStr = contentStr.concat("</div>");
+        }
+    }
+    rightContent.html(contentStr);
+});
+
+$("#linePage").click(function(){
+    let rightContent = $("#rightContent");
+    let contentStr = "";
+    rightContent.css("opacity", "0.01");
+    rightContentLoader();
+    for(let i=0;i<lineImgs.length;i++) {
+        if(i%2==0) {
+            contentStr = contentStr.concat("<div class='row'>");
+        }
+        contentStr = contentStr.concat("<div class='col-md-6 col-sm-12'>");
+        contentStr = contentStr.concat("<a href='./img/Line Stickers/" + lineImgs[i]+ "' data-fancybox='gallery' data-caption='Optional caption'>");
+        contentStr = contentStr.concat("<img class='work img-fluid' style='max-width: 300px;' src='./img/Line Stickers/" + lineImgs[i]+ "' alt=''>");
+        contentStr = contentStr.concat("</a>");
+        contentStr = contentStr.concat("</div>");
+        if(i%2!=0) {
+            contentStr = contentStr.concat("</div>");
+        }
+    }
+    rightContent.html(contentStr);
+});
+
+$("#merryPage").click(function(){
+    let rightContent = $("#rightContent");
+    let contentStr = "";
+    rightContent.css("opacity", "0.01");
+    rightContentLoader();
+    for(let i=0;i<merryImgs.length;i++) {
+        if(i%2==0) {
+            contentStr = contentStr.concat("<div class='row'>");
+        }
+        contentStr = contentStr.concat("<div class='col-md-6 col-sm-12'>");
+        contentStr = contentStr.concat("<a href='./img/Merry Christmas/" + merryImgs[i]+ "' data-fancybox='gallery' data-caption='Optional caption'>");
+        contentStr = contentStr.concat("<img class='work img-fluid' style='max-width: 300px;' src='./img/Merry Christmas/" + merryImgs[i]+ "' alt=''>");
+        contentStr = contentStr.concat("</a>");
+        contentStr = contentStr.concat("</div>");
+        if(i%2!=0) {
+            contentStr = contentStr.concat("</div>");
+        }
+    }
+    rightContent.html(contentStr);
+});
+
+$("#watercolorPage").click(function(){
+    let rightContent = $("#rightContent");
+    let contentStr = "";
+    rightContent.css("opacity", "0.01");
+    rightContentLoader();
+    for(let i=0;i<watercolorImgs.length;i++) {
+        if(i%2==0) {
+            contentStr = contentStr.concat("<div class='row'>");
+        }
+        contentStr = contentStr.concat("<div class='col-md-6 col-sm-12'>");
+        contentStr = contentStr.concat("<a href='./img/Watercolor/" + watercolorImgs[i]+ "' data-fancybox='gallery' data-caption='Optional caption'>");
+        contentStr = contentStr.concat("<img class='work img-fluid' style='max-width: 300px;' src='./img/Watercolor/" + watercolorImgs[i]+ "' alt=''>");
         contentStr = contentStr.concat("</a>");
         contentStr = contentStr.concat("</div>");
         if(i%2!=0) {
