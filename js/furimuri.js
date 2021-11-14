@@ -37,6 +37,7 @@ $.getJSON( "./json/images.json", function(data) {
 
 // Fade-in function
 function rightContentLoader() {
+    $(".loading").css("z-index", 1050);
     $(".loading").css("display", "");
     $(".loader-inner").loaders();
     setTimeout(function () {
