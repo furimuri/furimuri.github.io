@@ -50,6 +50,11 @@ function rightContentLoader() {
     }, 2600);
 }
 
+function setNavInactive(){
+    $("li.nav-item").find(".active").removeClass("active");
+    $("a.active").removeClass("active");
+}
+
 // UI functions
 $("a.nav-link").click(function(){
     let rightTitle = $("#rightTitle");
@@ -66,6 +71,7 @@ $("#homePage").click(function(){
     let rightTitle = $("#rightTitle");
     let rightContent = $("#rightContent");
     let contentStr = "";
+    setNavInactive();
     contentStr = contentStr.concat("<div class='row'>");
         contentStr = contentStr.concat("<div class='col-12'>");
         contentStr = contentStr.concat("<img src='./img/home.jpg' class='home rounded float-left img-fluid'>");
