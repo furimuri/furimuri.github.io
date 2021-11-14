@@ -95,7 +95,7 @@ $("a[name='classPage']").click(function($this){
         }
         contentStr = contentStr.concat("<div class='col-lg-4 col-md-12 col-sm-12'>");
         contentStr = contentStr.concat("<a href='./img/"+ myFuriWorks[thisID].folder +"/" + myFuriWorks[thisID].images[i].name + ".jpg" + "' data-fancybox='gallery' data-caption='<h4>"+ imgTitle + "</h4><br><h5>" + imgContent +"</h5>'>");
-        contentStr = contentStr.concat("<img class='work img-fluid' style='max-width: 300px;' src='./img/"+myFuriWorks[thisID].folder+"/" + myFuriWorks[thisID].images[i].name + ".jpg" + "' alt=''>");
+        contentStr = contentStr.concat("<img class='work img-fluid rounded' style='max-width: 300px;' src='./img/"+myFuriWorks[thisID].folder+"/" + myFuriWorks[thisID].images[i].name + ".jpg" + "' alt=''>");
         contentStr = contentStr.concat("</a>");
         contentStr = contentStr.concat("</div>");
         if((i+1)%3==0 && i!=0) {

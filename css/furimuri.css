@@ -51,7 +51,7 @@ div.bottom {
 
 /* image settings */
 img.home {
-	max-width: 600px;
+	margin-right: 10px;
 }
 
 img.work {
