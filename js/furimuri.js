@@ -83,7 +83,7 @@ $("#homePage").click(function(){
 $("a[name='classPage']").click(function($this){
     let rightContent = $("#rightContent");
     let contentStr = "";
-    let thisID = $this.currentTarget.id;
+    let thisID = $this.currentTarget.id.split("_")[0];
 
     rightContent.css("opacity", "0.01");
     rightContentLoader();
@@ -109,6 +109,13 @@ function getObjectName(input){
     var rows = input.querySelector('img').name.split('.')[0];
     return rows;
 }
+
+$("li.nav-item").on("click", function(){
+    $(".navbar-nav").find(".active").removeClass("active");
+    $(this).addClass("active");
+    $(this).find("a").addClass("active");
+
+});
 
 // if(jQuery().fancybox) {
 //     $(document).ready(function() {

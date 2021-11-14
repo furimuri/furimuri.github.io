@@ -42,6 +42,10 @@ a.nav-link:hover {
 	color: #222 !important;
 }
 
+.navbar-brand {
+	font-size: 2rem !important;
+}
+
 /* bottom */
 div.bottom {
 	margin-top: 150px;
@@ -67,3 +71,27 @@ img.smallIcon {
 }
 
 .fancybox-wrapper a img{ display:inline-block; vertical-align:top; width:33%;}
+
+@media screen and (max-width: 768px) {
+	button.myNavBtn {
+		display: "";
+	}
+	ul.myTopNavItem {
+		display: "";
+	}
+	div.myLeftNavItem {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	button.myNavBtn {
+		display: none;
+	}
+	ul.myTopNavItem {
+		display: none;
+	}
+	div.myLeftNavItem {
+		display: "";
+	}
+}
