@@ -28,6 +28,7 @@ function getMobileOperatingSystem() {
 
 if(getMobileOperatingSystem() == "iOS") {
     $("#linkFB").attr("href", "fb://profile/805794976434515");
+    $("#linkIG").attr("href", "instagram://user?username=furimuriart");
 }
 
 $.getJSON( "./json/images.json", function(data) {
