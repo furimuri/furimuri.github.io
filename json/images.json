@@ -1,148 +1,144 @@
 {
-    "myWork": [
-        {
-            "name": "Paper Tape",
-            "content": "紙膠帶",
-            "images": ""
-        },
-        {
-            "name": "Shop Logo",
-            "content": "商店招牌",
-            "images": ""
-        },
-        {
-            "name": "Line Stickers",
-            "content": "Line貼圖",
-            "images": ""
-        },
-        {
-            "name": "Poster",
-            "content": "海報",
-            "images": ""
-        }
-    ],
-    "animal": [
-        {
-            "name": "01",
-            "content": "",
-            "images": ""
-        },
-        {
-            "name": "02",
-            "content": "",
-            "images": ""
-        },
-        {
-            "name": "03",
-            "content": "",
-            "images": ""
-        },
-        {
-            "name": "04",
-            "content": "",
-            "images": ""
-        },
-        {
-            "name": "05",
-            "content": "",
-            "images": ""
-        }
-    ],
-    "coffee": [
-        {
-            "name": "01",
-            "content": "",
-            "images": ""
-        },
-        {
-            "name": "02",
-            "content": "",
-            "images": ""
-        },
-        {
-            "name": "03",
-            "content": "",
-            "images": ""
-        },
-        {
-            "name": "04",
-            "content": "",
-            "images": ""
-        },
-        {
-            "name": "05",
-            "content": "",
-            "images": ""
-        },
-        {
-            "name": "06",
-            "content": "",
-            "images": ""
-        },
-        {
-            "name": "07",
-            "content": "",
-            "images": ""
-        },{
-            "name": "08",
-            "content": "",
-            "images": ""
-        },{
-            "name": "09",
-            "content": "",
-            "images": ""
-        },{
-            "name": "10",
-            "content": "",
-            "images": ""
-        }
-    ],
-    "illus": [
-        {
-            "name": "01",
-            "content": "",
-            "images": ""
-        },
-        {
-            "name": "02",
-            "content": "",
-            "images": ""
-        }
-    ],
-    "line": [
-        {
-            "name": "01",
-            "content": "",
-            "images": ""
-        }
-    ],
-    "merry": [
-        {
-            "name": "01",
-            "content": "",
-            "images": ""
-        },
-        {
-            "name": "02",
-            "content": "",
-            "images": ""
-        },
-        {
-            "name": "03",
-            "content": "",
-            "images": ""
-        }
-    ],
-    "watercolor": [
-        {
-            "name": "01",
-            "content": "",
-            "images": ""
-        },
-        {
-            "name": "02",
-            "content": "",
-            "images": ""
-        }
-    ]
+    "animal": {
+        "folder": "Animal Illustration",
+        "images": [
+            {
+                "name": "01",
+                "title":"",
+                "content": ""
+            },
+            {
+                "name": "02",
+                "title":"",
+                "content": ""
+            },
+            {
+                "name": "03",
+                "title":"",
+                "content": ""
+            },
+            {
+                "name": "04",
+                "title":"",
+                "content": ""
+            },
+            {
+                "name": "05",
+                "title":"",
+                "content": ""
+            }
+        ]
+    },
+    "coffee": {
+        "folder": "Coffee Shop",
+        "images":[
+            {
+                "name": "01",
+                "title":"",
+                "content": ""
+            },
+            {
+                "name": "02",
+                "title":"很像的 咖啡杯",
+                "content": "我們是很像的 咖啡杯。<br>以為今天的咖啡和昨天幾乎一樣，細心體會或是自己創造出，就會發現微小的不同，日復一日，也是幸福的事。<br>以爲是一樣的人事物，其實有各自的個性與滋味。每當我們在一起的時候，正因為各自的獨特加上微妙的共同點，顯得更像契合的同類，一群朋友，一個系列。                "
+            },
+            {
+                "name": "03",
+                "title":"很像的 三明治",
+                "content": "我們是很像的 三明治。<br>奇異果三明治、草莓三明治、柑橘三明治，我們都被吐司包覆著，夾著一點奶油，但我們是奇異果三明治、草莓三明治、柑橘三明治。"
+            },
+            {
+                "name": "04",
+                "title":"",
+                "content": ""
+            },
+            {
+                "name": "05",
+                "title":"",
+                "content": ""
+            },
+            {
+                "name": "06",
+                "title":"",
+                "content": ""
+            },
+            {
+                "name": "07",
+                "title":"",
+                "content": ""
+            },{
+                "name": "08",
+                "title":"",
+                "content": ""
+            },{
+                "name": "09",
+                "title":"",
+                "content": ""
+            },{
+                "name": "10",
+                "title":"",
+                "content": ""
+            }
+        ]
+    },
+    "illus": {
+        "folder": "Illustration",
+        "images": [
+            {
+                "name": "01",
+                "title":"",
+                "content": ""
+            },
+            {
+                "name": "02",
+                "title":"Appreciating What&apos;s Already There.",
+                "content": "謝謝出現在我生命中的你，無論是那幾年的陪伴，還是現在每天下班後相聚的夜晚。或許我在追求的，在本質上，都是我已經擁有的東西。<br><br>這張卡片想給你想給的人。<br><br>想到要見面，路上的大雨都不覺得厭煩。看似在重複的生活中，也是累積我們相處的日子。一起旅行的回憶，咖啡一壺不嫌多的分享，讓我覺得，好險我還有繼續生活的機會，才能在心裡跟你說聲謝謝。"
+            }
+        ]
+    },
+    "line": {
+        "folder": "Line Stickers",
+        "images":[
+            {
+                "name": "01",
+                "title":"",
+                "content": ""
+            }
+        ]
+    },
+    "merry": {
+        "folder": "Merry Christmas",
+        "images":[
+            {
+                "name": "01",
+                "title": "鼴鼠家的聖誕節花圈",
+                "content": "鼴鼠個性內向，平常家裡也沒有訪客。但是到了聖誕節，大家都想來牠家坐坐。原來鼴鼠雖然話少，但腦筋總是停不下來，於是鼴鼠家的花圈就比春天還早跟大家見面了。"
+            },
+            {
+                "name": "02",
+                "title":"有聖誕樹的屋子",
+                "content": "經過陌生的街道，只要看到櫥窗裡的聖誕樹，彷彿覺得自己跟這條街有了一點連結，無論是自己或是一旁樹叢裡的兔子，作為都市街頭的漫遊者，都想要被好好善待。"
+            },
+            {
+                "name": "03",
+                "title":"森林深處的喫茶店",
+                "content": "鐵紺色天空的晚上，在寂靜的森林裡，喫茶店營業中，等著來自森林深處的訪客上門光顧。狐狸和貓頭鷹站在寒冷的雪地，已經嗅到咖啡香氣，想到老闆泡咖啡嚴肅的樣子，它們覺得有點有趣。"
+            }
+        ]
+    },
+    "watercolor": {
+        "folder": "Watercolor",
+        "images":[
+            {
+                "name": "01",
+                "title":"",
+                "content": ""
+            },
+            {
+                "name": "02",
+                "title":"",
+                "content": ""
+            }
+        ]
+    }
 }
