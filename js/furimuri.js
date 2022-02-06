@@ -1,3 +1,4 @@
+var myFuriBanners;
 var myFuriWorks;
 
 // fb://profile/805794976434515
@@ -31,6 +32,12 @@ if(getMobileOperatingSystem() == "iOS") {
     $("#linkIG").attr("href", "instagram://user?username=furimuriart");
 }
 
+// Initial panners' images path
+$.getJSON( "./json/banner.json", function(data) {
+    myFuriBanners = data;
+});
+
+// Initial works' images path
 $.getJSON( "./json/images.json", function(data) {
     myFuriWorks = data;
 });
@@ -109,6 +116,26 @@ $("a[name='classPage']").click(function($this){
             contentStr = contentStr.concat("</div>");
         }
     }
+    rightContent.html(contentStr);
+});
+
+$("a[name='info']").click(function($this){
+    let rightContent = $("#rightContent");
+    let contentStr = "";
+    let thisID = $this.currentTarget.id;
+
+    rightContent.css("opacity", "0.01");
+    rightContentLoader();
+    
+    contentStr = contentStr.concat("<div class='row align-items-center infoContent'>");
+    contentStr = contentStr.concat("<div class='col-lg-12 col-md-12 col-sm-12'>");
+    contentStr = contentStr.concat("<hr/><div><p>&para; Brand Details</p></div>");
+    contentStr = contentStr.concat("<div>2018.12 furimuri on Pinkoi <span class='gray'><a href='https://www.pinkoi.com/store/furimuri' target='_blank'>&#64;furimuri_pinkoi</a></span></div>");
+    contentStr = contentStr.concat("<p><div><p>&para; Awards</p></div>");
+    contentStr = contentStr.concat("<div>2021.11 <a href='https://www.tintint.com/event/creator2021/card?utm_campaign=creator2021-2&utm_medium=creator2021&utm_source=bhuntr#race-tab4' target='_blank'>「點點印圓夢計畫 - 卡片募集」</a> Original design prize. <span class='gray'><a href='https://www.tintint.com/blog/post/29745' target='_blank'>&#64;Tintint interview</a></span></div>");
+    contentStr = contentStr.concat("<div>2021.12 <a href='https://www.instagram.com/p/CYQ4zHSsWWP/' target='_blank'>「Aromase Illustration Competition」</a> 1<sup>st</sup> prize. <span class='gray'><a href='https://www.instagram.com/aromasetw/' target='_blank'>&#64;aromasetw</a></span></div>");
+    contentStr = contentStr.concat("</div></p>");
+        
     rightContent.html(contentStr);
 });
 

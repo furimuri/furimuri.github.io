@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.5.1.1.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/fancybox.css"/>
     <link rel="stylesheet" type="text/css" href="css/loaders.min.css"/>
+    <!-- banner css
+    <link rel="stylesheet" type="text/css" href="css/banner.css"/> -->
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css"/>
 
     <!--[if IE]>
@@ -30,7 +32,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-28633LD46K');
     </script>
 </head>
@@ -43,7 +44,7 @@
         <header class="header">
             <nav class="navbar navbar-expand-lg navbar-light bg-light myNav">
                 <div class="container-fluid">
-                <a id="homePage" class="title text-decoration-none navbar-brand" href="#" target="_self">&nbsp;<img class="logo" src="./imgs/logo.jpg"/>&nbsp;Furimuri</a>
+                <a id="homePage" class="title text-decoration-none navbar-brand" href="#" target="_self">&nbsp;<img class="logo" src="./imgs/logo.jpg"/><span class="webTitle">&nbsp;furimuri</span></a>
                 <button class="navbar-toggler myNavBtn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -67,6 +68,10 @@
                         <li class="nav-item">
                             <a name="classPage" id="watercolor_0" class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Watercolor</a>
                         </li>
+                        <hr/>
+                        <li class="nav-item">
+                            <a name="info" id="aboutPage" class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Profile</a>
+                        </li>
                     </ul>
                 </div>
                 </div>
@@ -83,6 +88,8 @@
                         <a name="classPage" id="line_1" class="nav-link" href="#">Line Stickers</a>
                         <a name="classPage" id="merry_1" class="nav-link" href="#">Merry Christmas</a>
                         <a name="classPage" id="watercolor_1" class="nav-link" href="#">Watercolor</a>
+                        <hr/>
+                        <a name="info" id="aboutPage" class="nav-link" href="#">Profile</a>
                     </nav>
                 </div>
                 <div class="col-sm-12 col-md-9">
@@ -90,11 +97,18 @@
                         <!-- <div class="loader-inner ball-spin-fade-loader"></div> -->
                         <div class="loader-inner ball-scale-ripple-multiple"></div>
                     </div>
-                    <div class="row align-items-start">
+                    <div class="row align-items-start location">
                         <div id="rightTitle"></div>
                     </div>
                     <div class="row align-items-start"></div>
                         <div id="rightContent">
+                            <!-- banner UI
+                            <div class="g_slide" id="slides">
+                                <div class="switch_main">
+                                    <a class="item switch_item" href="#"><img data-src="./banners/2021_Aromase.jpg"></a>
+                                    <a class="item switch_item" href="#"><img data-src="./banners/2021_Aromase.jpg"></a>
+                                </div>
+                            </div> -->
                             <img src='./img/home.jpg' class='home rounded float-left img-fluid'>
                         </div>
                     </div>
@@ -112,7 +126,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <div>​Products &nbsp;&nbsp;: <a href = "https://www.pinkoi.com/store/furimuri" target="_blank">Furimuri in Pinkoi</a></div>
+                            <div>​Products &nbsp;&nbsp;: <a href = "https://www.pinkoi.com/store/furimuri" target="_blank">furimuri in Pinkoi</a></div>
                         </div>
                     </div>
                     <div class="row">
@@ -125,7 +139,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <div class="">​©️ 2021 furimuri</div>
+                            <div class="">​&copy; 2022 furimuri</div>
                         </div>
                     </div>
                 </div>
@@ -135,14 +149,23 @@
         
     </div>
     <!-- JS -->
-
-    <!-- <script src="js/jquery-1.7.min.js"></script> -->
-
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.5.1.1.min.js"></script>
     <script src="js/ns.hover.min.js"></script>
     <script src="js/loaders.css.js"></script>
     <script src="js/fancybox.umd.js"></script>
     <script src="js/furimuri.js"></script>
+    <!-- js for banner in home page
+    <script src="js/require.js"></script>
+    <script src="js/switchable.js"></script>
+    <script>
+        switchable({
+            $element: $('#slides')
+            ,interval: 2000
+            ,effect: 'fade'
+            // ,animateSpeed: 500
+        });
+    </script>
+    -->
 </body>
 </html>
