@@ -109,7 +109,11 @@ $("a[name='classPage']").click(function($this){
         }
         contentStr = contentStr.concat("<div class='col-lg-4 col-md-4 col-sm-12 imgDiv'>");
         contentStr = contentStr.concat("<a href='./img/"+ myFuriWorks[thisID].folder +"/" + myFuriWorks[thisID].images[i].name + ".jpg" + "' data-fancybox='gallery' data-caption='<h4>"+ imgTitle + "</h4><br><h5>" + imgContent +"</h5>'>");
+        // Hover effects not active 20220214
+        // contentStr = contentStr.concat("<div class='view view-first'>");
         contentStr = contentStr.concat("<img class='work img-fluid rounded' src='./img/"+myFuriWorks[thisID].folder+"/" + myFuriWorks[thisID].images[i].name + ".jpg" + "' alt=''>");
+        // contentStr = contentStr.concat("<div class='mask'><h2>Midtown</h2><p>A description of some sort between these tags. I am so cool and awesomely awesome.</p></div>")
+        // contentStr = contentStr.concat("</div>");
         contentStr = contentStr.concat("</a>");
         contentStr = contentStr.concat("</div>");
         if((i+1)%3==0 && i!=0) {
