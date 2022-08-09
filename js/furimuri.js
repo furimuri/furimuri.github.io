@@ -1,5 +1,5 @@
-var myFuriBanners;
-var myFuriWorks;
+let myFuriBanners;
+let myFuriWorks;
 
 // fb://profile/805794976434515
 
@@ -12,7 +12,7 @@ var myFuriWorks;
 // }
 
 function getMobileOperatingSystem() {
-    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    let userAgent = navigator.userAgent || navigator.vendor || window.opera;
     // Windows Phone must come first because its UA also contains "Android"
     if (/windows phone/i.test(userAgent)) {
         return "Windows Phone";
@@ -135,9 +135,11 @@ $("a[name='info']").click(function($this){
     contentStr = contentStr.concat("<div class='col-lg-12 col-md-12 col-sm-12'>");
     contentStr = contentStr.concat("<hr/><div><p>&para; Brand Details</p></div>");
     contentStr = contentStr.concat("<div>2018.12 furimuri on Pinkoi <span class='gray'><a href='https://www.pinkoi.com/store/furimuri' target='_blank'>&#64;furimuri_pinkoi</a></span></div>");
+    contentStr = contentStr.concat("<div>2021.12 合作書店 <a href='https://www.facebook.com/ubuntubook01/' target='_blank'>「烏邦圖書店_環河店」</a> 商品販售中 <span class='gray'><a href='https://goo.gl/maps/GF4DdcTJhDkPpbqq9' target='_blank'>&#64;烏邦圖書店環河店</a></span></div>");
     contentStr = contentStr.concat("<p><div><p>&para; Awards</p></div>");
-    contentStr = contentStr.concat("<div>2021.11 <a href='https://www.tintint.com/event/creator2021/card?utm_campaign=creator2021-2&utm_medium=creator2021&utm_source=bhuntr#race-tab4' target='_blank'>「點點印圓夢計畫 - 卡片募集」</a> Original design prize. <span class='gray'><a href='https://www.tintint.com/blog/post/29745' target='_blank'>&#64;Tintint interview</a></span></div>");
+    contentStr = contentStr.concat("<div>2021.11 <a href='https://www.tintint.com/event/creator/card202101/#race-tab4' target='_blank'>「點點圓夢計畫 - 卡片募集 (聖誕節/新年/生日)」</a> Original design prize. <span class='gray'><a href='https://www.tintint.com/blog/post/29745' target='_blank'>&#64;Tintint interview</a></span></div>");
     contentStr = contentStr.concat("<div>2021.12 <a href='https://www.instagram.com/p/CYQ4zHSsWWP/' target='_blank'>「Aromase Illustration Competition」</a> 1<sup>st</sup> prize. <span class='gray'><a href='https://www.instagram.com/aromasetw/' target='_blank'>&#64;aromasetw</a></span></div>");
+    contentStr = contentStr.concat("<div>2022.04 <a href='https://www.tintint.com/event/creator/card202201/#race-tab4' target='_blank'>「點點圓夢計畫 - 卡片募集 (父親節/母親節)」</a> Original design prize. <span class='gray'>");
     contentStr = contentStr.concat("</div></p>");
         
     rightContent.html(contentStr);
